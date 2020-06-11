@@ -1,0 +1,5 @@
+outputs:
+  - enumName: Strings
+    output: Strings/Localizable.swift
+    sort: asc
+    publicAccess: true
