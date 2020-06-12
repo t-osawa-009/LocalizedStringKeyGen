@@ -70,7 +70,7 @@ import SwiftUI
         
         keys.forEach { (_key) in
             strings.append("""
-    \(publicAccessText)static var \(_key): LocalizedStringKey { return "\(_key)"}
+    \(publicAccessText)static var \(_key): LocalizedStringKey { return "\(_key)" }
 """)
         }
         strings.append("}")
