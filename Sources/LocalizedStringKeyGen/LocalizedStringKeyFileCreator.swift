@@ -43,7 +43,7 @@ struct LocalizedStringKeyFileCreator: FileCreatable {
         var keys: [String] = []
         let array = originText.components(separatedBy: "\n").filter({ !$0.isEmpty })
         array.forEach { (text) in
-            let result = text.components(separatedBy: "=").first
+            let result = text.components(separatedBy: "=").first?.trimmingCharacters(in: .whitespacesAndNewlines)
             if let _text = result?.replacingOccurrences(of: "\"", with: ""), !_text.isEmpty {
                 keys.append(_text)
             }
